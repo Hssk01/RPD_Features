@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Repository xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<DECLARE>
+<LogicalColumn name="Quantity Sold(Kg)" parentName="&quot;SH SALES&quot;.&quot;F1 SALES&quot;" parentId="2035:390" parentUid="000000b0-9ece-15dc-806e-0a0a0a0a0000" id="2006:398" uid="000000b8-9ece-15dc-806e-0a0a0a0a0000" isWriteable="false">
+<AttributeDefn>
+<Expr><![CDATA["ORCL".""."SH"."F1 SALES"."QUANTITY_SOLD"]]></Expr>
+<ExprText><![CDATA["%1"]]></ExprText>
+<Objects>
+<RefObject id="3003:203" uid="c0000006-9e5a-15dc-806e-0a0a0a0a0000" qualifiedName="&quot;ORCL&quot;..&quot;SH&quot;.&quot;F1 SALES&quot;.&quot;QUANTITY_SOLD&quot;"/>
+</Objects>
+</AttributeDefn>
+<Levels>
+<RefLogicalLevel id="2025:765" uid="40000000-f16f-15dc-922a-0a0a0a0a0000" qualifiedName="&quot;SH SALES&quot;.&quot;H2 Product&quot;.&quot;Product Details&quot;"/>
+</Levels>
+</LogicalColumn>
+
+<MeasureDefn name="Measure" parentName="&quot;SH SALES&quot;.&quot;F1 SALES&quot;.&quot;Quantity Sold(Kg)&quot;" parentId="2006:398" parentUid="000000b8-9ece-15dc-806e-0a0a0a0a0000" id="2048:624" isCommutative="false">
+<Rules>
+<RefAggrRule id="2050:816" qualifiedName="&quot;SH SALES&quot;.&quot;F1 SALES&quot;.&quot;Quantity Sold(Kg)&quot;.&quot;Measure&quot;.&quot;AggRule_2050:8161543255158&quot;"/>
+</Rules>
+</MeasureDefn>
+
+<AggrRule name="AggRule_2050:8161543255158" parentName="&quot;SH SALES&quot;.&quot;F1 SALES&quot;.&quot;Quantity Sold(Kg)&quot;.&quot;Measure&quot;" parentId="2048:624" id="2050:816" isDefault="true">
+<Expr><![CDATA[ SUM("SH SALES"."F1 SALES"."Quantity Sold(Kg)")]]></Expr>
+<ExprText><![CDATA[ SUM("%1")]]></ExprText>
+<Objects>
+<RefObject id="2006:398" uid="000000b8-9ece-15dc-806e-0a0a0a0a0000" qualifiedName="&quot;SH SALES&quot;.&quot;F1 SALES&quot;.&quot;Quantity Sold(Kg)&quot;"/>
+</Objects>
+</AggrRule>
+
+<PresentationColumn name="Quantity Sold(Kg)" parentName="&quot;SALES&quot;..&quot;Fact Sales&quot;" parentId="4008:617" parentUid="800000bb-9f77-15dc-806e-0a0a0a0a0000" id="4010:613" uid="800000b7-9f77-15dc-806e-0a0a0a0a0000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
+<RefLogicalColumn id="2006:398" uid="000000b8-9ece-15dc-806e-0a0a0a0a0000" qualifiedName="&quot;SH SALES&quot;.&quot;F1 SALES&quot;.&quot;Quantity Sold(Kg)&quot;"/>
+<Aliases>
+<Alias name="Quantity Sold"/>
+</Aliases>
+</PresentationColumn>
+
+</DECLARE>
+</Repository>
